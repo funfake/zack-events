@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import { reader } from './reader';
-import './styles.css';
+import Link from "next/link";
+import { reader } from "@/app/reader";
 
 export default async function Homepage() {
   const posts = await reader.collections.posts.all();
 
   return (
     <div>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <h1>Keystatic ⚡️</h1>
       <p>This homepage shows how to load a collection from the reader API.</p>
       <p>
@@ -15,7 +15,7 @@ export default async function Homepage() {
       </p>
       <h2>Posts</h2>
       <ul>
-        {posts.map(post => (
+        {posts.map((post) => (
           <li key={post.slug}>
             <Link href={`/${post.slug}`}>{post.entry.title}</Link>
           </li>
