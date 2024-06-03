@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { reader } from "@/app/reader";
 
-export default async function Homepage() {
+export default async function BlogPage() {
   const posts = await reader.collections.posts.all();
 
   return (
@@ -17,7 +17,7 @@ export default async function Homepage() {
       <ul>
         {posts.map((post) => (
           <li key={post.slug}>
-            <Link href={`/${post.slug}`}>{post.entry.title}</Link>
+            <Link href={`/blog/${post.slug}`}>{post.entry.title}</Link>
           </li>
         ))}
       </ul>
