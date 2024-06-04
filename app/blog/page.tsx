@@ -8,11 +8,13 @@ export default async function BlogPage() {
     <div>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <h1>Keystatic ⚡️</h1>
-      <p>This homepage shows how to load a collection from the reader API.</p>
-      <p>
+      <div>
+        This homepage shows how to load a collection from the reader API.
+      </div>
+      <div>
         <a href="/keystatic">Click here to visit the Admin UI</a>, or the link
         below to view a post in the collection.
-      </p>
+      </div>
       <h2>Posts</h2>
       <ul>
         {posts.map((post) => (

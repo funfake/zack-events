@@ -13,7 +13,7 @@ const Navbar = () => {
     <div
       className={cn(
         "z-50 bg-transparent fixed top-0 flex items-center w-full p-6",
-        scrolled && "border-b shadow-sm bg-white"
+        scrolled && "border-b bg-background"
       )}
     >
       <Logo />
